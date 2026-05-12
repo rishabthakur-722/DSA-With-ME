@@ -1,26 +1,50 @@
+public class Student {
 
-public class App {
+    private int id;
+    private String name;
+    private int age;
+    private long phoneNumber;
 
-    public static void main(String[] args) {
+    // Constructor
+    public Student(int id, String name, int age, long phoneNumber) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.phoneNumber = phoneNumber;
+    }
 
-        // Object creation using parameterized constructor
-        Student s1 = new Student(101, "Alice", 20, 9876543210L);
+    // Getters
+    public int getId() {
+        return id;
+    }
 
-        // Data access using getter
-        System.out.println("ID: " + s1.getId());
-        System.out.println("Name: " + s1.getName());
-        System.out.println("Age: " + s1.getAge());
-        System.out.println("Phone: " + s1.getPhoneNumber());
+    public String getName() {
+        return name;
+    }
 
-        // Data update using setter
-        s1.setName("John");
-        s1.setAge(22);
+    public int getAge() {
+        return age;
+    }
 
-        System.out.println("\nAfter Update:");
-        System.out.println("Name: " + s1.getName());
-        System.out.println("Age: " + s1.getAge());
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
 
-        s1.study();
-        s1.sleep();
+    // Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    // Methods
+    public void study() {
+        System.out.println(name + " is studying");
+    }
+
+    public void sleep() {
+        System.out.println(name + " is sleeping");
     }
 }
